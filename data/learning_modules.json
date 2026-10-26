@@ -1,0 +1,382 @@
+{
+  "modules": [
+    {
+      "id": "phishing",
+      "minutes": 4,
+      "title": { "en": "Phishing and fake login pages", "ta": "ஃபிஷிங் மற்றும் போலி உள்நுழைவு பக்கங்கள்" },
+      "summary": {
+        "en": "How fake pages and messages try to collect a login.",
+        "ta": "போலி பக்கங்களும் செய்திகளும் உள்நுழைவை எப்படி கேட்கின்றன."
+      },
+      "explanation": {
+        "en": "Phishing copies a familiar service and asks you to sign in. The message may mention a delivery, a bank, or a school account. The dangerous step is entering a password or code on a page you reached from an unexpected message. A real company can also send ordinary notices, so the goal is to reach the service yourself instead of using the link you were sent.",
+        "ta": "ஃபிஷிங் என்பது பழக்கமான சேவையைப் போலத் தோன்றி உள்நுழையச் சொல்வது. செய்தி ஒரு டெலிவரி, வங்கி அல்லது பள்ளிக் கணக்கைப் பற்றி இருக்கலாம். எதிர்பாராத செய்தியில் இருந்து திறந்த பக்கத்தில் கடவுச்சொல் அல்லது குறியீட்டை உள்ளிடுவதுதான் ஆபத்து. உண்மையான நிறுவனமும் சாதாரண அறிவிப்பு அனுப்பும். அதனால் அனுப்பிய இணைப்பைப் பயன்படுத்தாமல், நீங்களே அந்த சேவையைத் திறப்பது பாதுகாப்பு."
+      },
+      "warningSigns": [
+        { "en": "A link that asks you to log in after a surprise message", "ta": "திடீர் செய்திக்குப் பிறகு உள்நுழையச் சொல்லும் இணைப்பு" },
+        { "en": "A domain that only looks similar to the real service", "ta": "உண்மை சேவையைப் போலத் தோன்றும் வேறு இணைய முகவரி" },
+        { "en": "Threats that the account will close today", "ta": "கணக்கு இன்றே மூடப்படும் என்ற அச்சுறுத்தல்" },
+        { "en": "A login page reached from a shortened link", "ta": "சுருக்கப்பட்ட இணைப்பிலிருந்து திறக்கும் உள்நுழைவு பக்கம்" }
+      ],
+      "example": {
+        "en": "“Your mailbox is almost full. Sign in within 30 minutes to keep it: http://example.com/mail-check”",
+        "ta": "“உங்கள் அஞ்சல் பெட்டி நிரம்பிவிட்டது. 30 நிமிடத்தில் உள்நுழையுங்கள்: http://example.com/mail-check”"
+      },
+      "safeActions": [
+        { "en": "Close the page. Open the service from its app or a bookmark you already trust.", "ta": "பக்கத்தை மூடுங்கள். ஏற்கெனவே நம்பும் செயலி அல்லது புக்மார்க் மூலம் சேவையைத் திறவுங்கள்." },
+        { "en": "Check the domain letter by letter before typing a password.", "ta": "கடவுச்சொல்லை உள்ளிடுவதற்கு முன் இணைய முகவரியை எழுத்து எழுத்தாகப் பாருங்கள்." },
+        { "en": "If you already entered a password, change it from the official app and sign out other sessions.", "ta": "ஏற்கெனவே கடவுச்சொல்லை உள்ளிட்டிருந்தால், அதிகாரப்பூர்வ செயலியில் மாற்றி மற்ற அமர்வுகளில் இருந்து வெளியேறுங்கள்." }
+      ],
+      "quiz": [
+        {
+          "id": "phish-1",
+          "prompt": { "en": "A message says your account will close unless you use its link. What is the safer first step?", "ta": "ஒரு இணைப்பைப் பயன்படுத்தாவிட்டால் கணக்கு மூடப்படும் என்கிறது. முதலில் எது பாதுகாப்பு?" },
+          "choices": [
+            { "en": "Use the link, but only if the page looks familiar", "ta": "பக்கம் பழக்கமாகத் தெரிந்தால் இணைப்பைப் பயன்படுத்துவது" },
+            { "en": "Leave the link and open the service yourself", "ta": "இணைப்பை விட்டுவிட்டு சேவையை நீங்களே திறப்பது" },
+            { "en": "Reply to the message and ask if it is real", "ta": "செய்திக்குப் பதில் அனுப்பி உண்மையா என்று கேட்பது" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "Replying or using the provided link keeps you on the sender's path. Start from the official app or site instead.", "ta": "பதிலளிப்பதும் கொடுத்த இணைப்பைத் திறப்பதும் அனுப்புநரின் வழியிலேயே இருக்கும். அதிகாரப்பூர்வ செயலி அல்லது தளத்தில் இருந்து தொடங்குங்கள்." }
+        },
+        {
+          "id": "phish-2",
+          "prompt": { "en": "The page uses HTTPS. What does that tell you?", "ta": "பக்கம் HTTPS பயன்படுத்துகிறது. அதனால் என்ன தெரியும்?" },
+          "choices": [
+            { "en": "The connection is encrypted, and the site can still be fake", "ta": "இணைப்பு மறைகுறியாக்கப்பட்டுள்ளது; தளம் போலியாகவும் இருக்கலாம்" },
+            { "en": "The company has been verified by SURAKSHIT", "ta": "அந்த நிறுவனத்தை SURAKSHIT உறுதி செய்துவிட்டது" },
+            { "en": "It is safe to enter any password there", "ta": "அங்கு எந்தக் கடவுச்சொல்லையும் உள்ளிடலாம்" }
+          ],
+          "correctIndex": 0,
+          "explanation": { "en": "HTTPS means the traffic is encrypted. It does not identify who owns the site.", "ta": "HTTPS போக்குவரத்து மறைகுறியாக்கப்பட்டது என்று மட்டும் சொல்கிறது. தளம் யாருடையது என்று நிரூபிக்காது." }
+        },
+        {
+          "id": "phish-3",
+          "prompt": { "en": "You typed your password into a page from a surprise message. What now?", "ta": "திடீர் செய்தியின் பக்கத்தில் கடவுச்சொல்லை உள்ளிட்டுவிட்டீர்கள். அடுத்து?" },
+          "choices": [
+            { "en": "Wait to see if anything happens", "ta": "ஏதாவது நடக்கிறதா என்று காத்திருப்பது" },
+            { "en": "Send the password to a friend to check it", "ta": "நண்பரிடம் கடவுச்சொல்லை அனுப்பி சரிபார்ப்பது" },
+            { "en": "Change the password from the official app", "ta": "அதிகாரப்பூர்வ செயலியில் கடவுச்சொல்லை மாற்றுவது" }
+          ],
+          "correctIndex": 2,
+          "explanation": { "en": "Change the password through a path you open yourself. Do not send it to anyone.", "ta": "நீங்களே திறக்கும் வழியில் கடவுச்சொல்லை மாற்றுங்கள். அதை யாரிடமும் அனுப்ப வேண்டாம்." }
+        }
+      ]
+    },
+    {
+      "id": "otp-upi",
+      "minutes": 4,
+      "title": { "en": "OTP and UPI payment scams", "ta": "OTP மற்றும் UPI பண மோசடிகள்" },
+      "summary": {
+        "en": "Codes and payment approvals are as valuable as cash.",
+        "ta": "குறியீடுகளும் பண அனுமதிகளும் பணத்தைப் போலவே முக்கியம்."
+      },
+      "explanation": {
+        "en": "A one-time code proves that the person holding the phone approved something. Banks, wallets, and government portals send codes so you can finish an action you started. A caller or message that asks you to read, forward, or type that code is asking for that approval. A UPI collect request works the same way: approving it can send money.",
+        "ta": "ஒரு முறை குறியீடு, அந்த தொலைபேசியை வைத்திருப்பவர் ஒன்றை அனுமதித்தார் என்பதைக் காட்டுகிறது. நீங்கள் தொடங்கிய செயலை முடிக்க வங்கிகளும் பணப்பைகளும் அரசு தளங்களும் குறியீட்டை அனுப்பும். அதைப் படித்துக் காட்ட, அனுப்ப, அல்லது உள்ளிடச் சொல்பவர் அந்த அனுமதியைக் கேட்கிறார். UPI வசூல் கோரிக்கையும் அப்படியே: அனுமதித்தால் பணம் போகலாம்."
+      },
+      "warningSigns": [
+        { "en": "Someone asks for an OTP, PIN, CVV, or card number", "ta": "OTP, PIN, CVV அல்லது அட்டை எண்ணை யாராவது கேட்பது" },
+        { "en": "A collect request you did not start", "ta": "நீங்கள் தொடங்காத வசூல் கோரிக்கை" },
+        { "en": "A refund that requires you to approve a payment", "ta": "பணம் திரும்ப வர ஒரு கட்டணத்தை அனுமதிக்கச் சொல்வது" },
+        { "en": "Pressure to act before the code expires", "ta": "குறியீடு காலாவதியாகும் முன் உடனே செய்யச் சொல்வது" }
+      ],
+      "example": {
+        "en": "“The refund is ready. Tell me the OTP that just arrived and approve the UPI request.”",
+        "ta": "“பணம் திரும்ப தயார். இப்போது வந்த OTP-ஐச் சொல்லுங்கள், UPI கோரிக்கையை அனுமதியுங்கள்.”"
+      },
+      "safeActions": [
+        { "en": "Do not read a code aloud or type it into a chat.", "ta": "குறியீட்டை உரக்கப் படிக்கவோ அரட்டையில் உள்ளிடவோ வேண்டாம்." },
+        { "en": "Reject payment requests you did not create, then check the official app.", "ta": "நீங்கள் உருவாக்காத பணக் கோரிக்கையை நிராகரித்து, அதிகாரப்பூர்வ செயலியில் பாருங்கள்." },
+        { "en": "If money moved, contact the payment provider and report at cybercrime.gov.in or call 1930.", "ta": "பணம் போயிருந்தால் பணச் சேவையைத் தொடர்புகொண்டு cybercrime.gov.in-ல் புகார் செய்யுங்கள் அல்லது 1930-ஐ அழையுங்கள்." }
+      ],
+      "quiz": [
+        {
+          "id": "otp-1",
+          "prompt": { "en": "A caller says they are from the bank and need the OTP to stop a payment. What do you do?", "ta": "வங்கியில் இருந்து பேசுவதாகச் சொல்லி, பணம் போவதைத் தடுக்க OTP வேண்டும் என்கிறார். என்ன செய்வது?" },
+          "choices": [
+            { "en": "Share it, because stopping a payment sounds helpful", "ta": "பணம் போவதைத் தடுப்பது நல்லது என்பதால் பகிர்வது" },
+            { "en": "Hang up and check the bank in its official app", "ta": "துண்டித்துவிட்டு வங்கியின் அதிகாரப்பூர்வ செயலியில் பார்ப்பது" },
+            { "en": "Share only the first three digits", "ta": "முதல் மூன்று இலக்கங்களை மட்டும் பகிர்வது" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "A bank does not need you to read an OTP to a caller. End the call and use the official app or the number on your card.", "ta": "அழைப்பாளரிடம் OTP-ஐப் படிக்க வங்கி கேட்காது. அழைப்பை முடித்து, அதிகாரப்பூர்வ செயலி அல்லது அட்டையில் உள்ள எண்ணைப் பயன்படுத்துங்கள்." }
+        },
+        {
+          "id": "otp-2",
+          "prompt": { "en": "An unexpected UPI request says “refund”. Approving it will:", "ta": "“பணம் திரும்ப” என்று எதிர்பாராத UPI கோரிக்கை வருகிறது. அனுமதித்தால்:" },
+          "choices": [
+            { "en": "Always send money back to you", "ta": "எப்போதும் பணம் உங்களிடம் திரும்ப வரும்" },
+            { "en": "Possibly pay the other person", "ta": "மறுபக்கத்திற்குப் பணம் போகலாம்" },
+            { "en": "Only show your name", "ta": "உங்கள் பெயரை மட்டும் காட்டும்" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "A collect or pay request can move money when you approve it. A refund does not require that approval.", "ta": "வசூல் அல்லது செலுத்தும் கோரிக்கையை அனுமதித்தால் பணம் போகலாம். பணம் திரும்புவதற்கு அந்த அனுமதி தேவையில்லை." }
+        },
+        {
+          "id": "otp-3",
+          "prompt": { "en": "Where should a real OTP be entered?", "ta": "உண்மையான OTP-ஐ எங்கு உள்ளிட வேண்டும்?" },
+          "choices": [
+            { "en": "Only in the official flow you opened yourself", "ta": "நீங்களே திறந்த அதிகாரப்பூர்வ படியில் மட்டும்" },
+            { "en": "In any SMS reply", "ta": "எந்த SMS பதிலிலும்" },
+            { "en": "In a WhatsApp chat with support", "ta": "ஆதரவு என்று சொல்லும் WhatsApp அரட்டையில்" }
+          ],
+          "correctIndex": 0,
+          "explanation": { "en": "Enter a code only on the page or app you opened to do that task. Do not send it back to a person.", "ta": "அந்த வேலைக்காக நீங்களே திறந்த பக்கம் அல்லது செயலியில் மட்டும் குறியீட்டை உள்ளிடுங்கள். ஒரு நபருக்குத் திருப்பி அனுப்ப வேண்டாம்." }
+        }
+      ]
+    },
+    {
+      "id": "impersonation",
+      "minutes": 4,
+      "title": { "en": "Impersonation and fake support", "ta": "ஆள்மாறாட்டமும் போலி ஆதரவும்" },
+      "summary": {
+        "en": "Callers and chats can wear a trusted name.",
+        "ta": "அழைப்புகளும் அரட்டைகளும் நம்பகமான பெயரைப் போட்டுக்கொள்ளலாம்."
+      },
+      "explanation": {
+        "en": "Impersonation borrows the name of a bank, courier, tax office, or support desk. The name itself is not evidence either way: real organizations also send messages, and criminals copy their logos. What matters is the request. Support staff do not need your password, remote-control app, or a payment to “verify” you.",
+        "ta": "ஆள்மாறாட்டம் ஒரு வங்கி, கூரியர், வரி அலுவலகம் அல்லது ஆதரவு மேசையின் பெயரைக் கடன் வாங்குகிறது. பெயர் மட்டும் ஆதாரமல்ல. உண்மை நிறுவனங்களும் செய்தி அனுப்பும்; மோசடி செய்பவர்கள் அவற்றின் சின்னங்களை நகலெடுப்பார்கள். முக்கியம் அவர்கள் கேட்பது. ஆதரவு ஊழியருக்கு உங்கள் கடவுச்சொல், தொலை கட்டுப்பாட்டுச் செயலி, அல்லது உங்களை “சரிபார்க்க” ஒரு கட்டணம் தேவையில்லை."
+      },
+      "warningSigns": [
+        { "en": "A call or chat you did not start claims to be support", "ta": "நீங்கள் தொடங்காத அழைப்பு அல்லது அரட்டை ஆதரவு என்கிறது" },
+        { "en": "They ask you to install a remote-access app", "ta": "தொலை அணுகல் செயலியை நிறுவச் சொல்கிறார்கள்" },
+        { "en": "They already know public details and use that to sound real", "ta": "பொதுவாகத் தெரிந்த விவரங்களைச் சொல்லி உண்மைபோலப் பேசுகிறார்கள்" },
+        { "en": "They forbid you from calling the organization back", "ta": "அந்த நிறுவனத்திற்கு நீங்கள் திரும்ப அழைக்கக்கூடாது என்கிறார்கள்" }
+      ],
+      "example": {
+        "en": "“This is customer care. Install AnyDesk so we can cancel a suspicious order on your account.”",
+        "ta": "“இது வாடிக்கையாளர் சேவை. உங்கள் கணக்கில் சந்தேக ஆர்டரை ரத்து செய்ய AnyDesk-ஐ நிறுவுங்கள்.”"
+      },
+      "safeActions": [
+        { "en": "Hang up or stop replying. Find the official number in the app or on a bill.", "ta": "அழைப்பைத் துண்டியுங்கள் அல்லது பதில் நிறுத்துங்கள். செயலி அல்லது பில்லில் உள்ள அதிகாரப்பூர்வ எண்ணைத் தேடுங்கள்." },
+        { "en": "Do not install software for a caller.", "ta": "அழைத்தவருக்காக மென்பொருளை நிறுவ வேண்டாம்." },
+        { "en": "Tell a family member if the caller tried to isolate you.", "ta": "உங்களைத் தனியாக்க முயன்றால் குடும்பத்தினரிடம் சொல்லுங்கள்." }
+      ],
+      "quiz": [
+        {
+          "id": "imp-1",
+          "prompt": { "en": "Which request is a warning even if the caller uses a bank's name?", "ta": "அழைப்பாளர் வங்கிப் பெயரைச் சொன்னாலும் எந்தக் கோரிக்கை எச்சரிக்கை?" },
+          "choices": [
+            { "en": "Asking you to open the official app yourself", "ta": "அதிகாரப்பூர்வ செயலியை நீங்களே திறக்கச் சொல்வது" },
+            { "en": "Asking you to install a remote-access app", "ta": "தொலை அணுகல் செயலியை நிறுவச் சொல்வது" },
+            { "en": "Telling you the branch's public working hours", "ta": "கிளையின் பொதுவான வேலை நேரத்தைச் சொல்வது" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "Remote-access software gives another person control of the device. A name on the caller ID does not change that.", "ta": "தொலை அணுகல் மென்பொருள் சாதனத்தின் கட்டுப்பாட்டை வேறொருவருக்குத் தரும். அழைப்பாளர் அடையாளத்தில் பெயர் இருந்தாலும் அது மாறாது." }
+        },
+        {
+          "id": "imp-2",
+          "prompt": { "en": "A courier message uses a real company name. That means:", "ta": "ஒரு கூரியர் செய்தி உண்மை நிறுவனப் பெயரைப் பயன்படுத்துகிறது. அதனால்:" },
+          "choices": [
+            { "en": "It might be real or copied; check in the official app", "ta": "உண்மையாகவோ நகலாகவோ இருக்கலாம்; அதிகாரப்பூர்வ செயலியில் பாருங்கள்" },
+            { "en": "It is definitely fraud", "ta": "அது நிச்சயமாக மோசடி" },
+            { "en": "It is definitely safe", "ta": "அது நிச்சயமாக பாதுகாப்பு" }
+          ],
+          "correctIndex": 0,
+          "explanation": { "en": "A familiar name is only context. Confirm the delivery in the courier's own app or site.", "ta": "பழக்கமான பெயர் ஒரு சூழல் மட்டும். கூரியரின் சொந்த செயலி அல்லது தளத்தில் டெலிவரியை உறுதி செய்யுங்கள்." }
+        },
+        {
+          "id": "imp-3",
+          "prompt": { "en": "The caller says not to tell your family. A safer response is to:", "ta": "குடும்பத்திடம் சொல்ல வேண்டாம் என்கிறார். பாதுகாப்பான பதில்:" },
+          "choices": [
+            { "en": "Keep the call secret and follow their steps", "ta": "அழைப்பை ரகசியமாக வைத்து அவர்கள் சொல்வதைச் செய்வது" },
+            { "en": "End the call and talk to someone you trust", "ta": "அழைப்பை முடித்து நீங்கள் நம்பும் ஒருவரிடம் பேசுவது" },
+            { "en": "Pay a small fee so they will stop calling", "ta": "அழைப்பு நிற்க ஒரு சிறிய கட்டணம் செலுத்துவது" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "Isolation is part of the pressure. Stop and involve a person you trust or the official helpline 1930.", "ta": "தனியாக்குவது அழுத்தத்தின் ஒரு பகுதி. நிறுத்தி, நீங்கள் நம்பும் ஒருவரையோ 1930 உதவி எண்ணையோ தொடர்புகொள்ளுங்கள்." }
+        }
+      ]
+    },
+    {
+      "id": "jobs-prizes",
+      "minutes": 3,
+      "title": { "en": "Fake jobs and prize messages", "ta": "போலி வேலையும் பரிசுச் செய்திகளும்" },
+      "summary": {
+        "en": "A real prize or job does not start with a fee you must pay.",
+        "ta": "உண்மையான பரிசோ வேலையோ நீங்கள் கட்டணம் கட்டுவதில் தொடங்காது."
+      },
+      "explanation": {
+        "en": "These messages congratulate you for a contest you did not enter or a job you did not apply for. The next step is a processing fee, a deposit, or a “refundable” charge. Once money is sent, the prize and the job do not arrive. Training materials and interview times can be real; an upfront fee to unlock them is the warning.",
+        "ta": "நீங்கள் சேராத போட்டிக்கோ விண்ணப்பிக்காத வேலைக்கோ வாழ்த்துச் சொல்லும் செய்திகள் இவை. அடுத்த படி ஒரு செயலாக்கக் கட்டணம், வைப்பு, அல்லது “திரும்பக் கிடைக்கும்” கட்டணம். பணம் போன பிறகு பரிசும் வேலையும் வராது. பயிற்சிப் பொருளும் நேர்காணல் நேரமும் உண்மையாக இருக்கலாம்; அவற்றைத் திறக்க முன்கூட்டியே கட்டணம் கேட்பது எச்சரிக்கை."
+      },
+      "warningSigns": [
+        { "en": "You won a contest you did not join", "ta": "நீங்கள் சேராத போட்டியில் வென்றதாகச் சொல்வது" },
+        { "en": "A job offer asks for a registration or training fee", "ta": "வேலை வாய்ப்பு பதிவு அல்லது பயிற்சிக் கட்டணம் கேட்கிறது" },
+        { "en": "The sender wants payment through a personal UPI ID", "ta": "தனிப்பட்ட UPI முகவரிக்குப் பணம் கேட்கிறார்கள்" },
+        { "en": "They rush you because the offer expires today", "ta": "சலுகை இன்றே முடியும் என்று அவசரப்படுத்துகிறார்கள்" }
+      ],
+      "example": {
+        "en": "“You are selected for a work-from-home role. Pay a refundable registration fee to receive the appointment letter.”",
+        "ta": "“வீட்டில் இருந்து வேலை செய்ய நீங்கள் தேர்வாகிவிட்டீர்கள். நியமனக் கடிதத்திற்குத் திரும்பக் கிடைக்கும் பதிவுக் கட்டணம் செலுத்துங்கள்.”"
+      },
+      "safeActions": [
+        { "en": "Do not pay to receive a prize, letter, or job kit.", "ta": "பரிசு, கடிதம் அல்லது வேலைப் பெட்டியைப் பெறப் பணம் செலுத்த வேண்டாம்." },
+        { "en": "Look up the organization yourself and ask whether the offer exists.", "ta": "நிறுவனத்தை நீங்களே தேடி, அந்த வாய்ப்பு உள்ளதா என்று கேளுங்கள்." },
+        { "en": "Keep the message and report it if money was requested.", "ta": "பணம் கேட்டிருந்தால் செய்தியை வைத்துக்கொண்டு புகார் செய்யுங்கள்." }
+      ],
+      "quiz": [
+        {
+          "id": "job-1",
+          "prompt": { "en": "A job message asks for a refundable fee before an offer letter. You should:", "ta": "நியமனக் கடிதத்திற்கு முன் திரும்பக் கிடைக்கும் கட்டணம் கேட்கிறது. நீங்கள்:" },
+          "choices": [
+            { "en": "Pay it, because refundable means there is no risk", "ta": "திரும்பக் கிடைக்கும் என்பதால் ஆபத்து இல்லை என்று செலுத்துவது" },
+            { "en": "Refuse and verify the employer through an official channel", "ta": "மறுத்து, அதிகாரப்பூர்வ வழியில் முதலாளியைச் சரிபார்ப்பது" },
+            { "en": "Pay from a friend's account so yours stays safe", "ta": "உங்கள் கணக்கு பாதுகாப்பாக இருக்க நண்பர் கணக்கில் இருந்து செலுத்துவது" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "“Refundable” is a common lure. Verify the employer without paying first.", "ta": "“திரும்பக் கிடைக்கும்” என்பது பழக்கமான தூண்டில். முதலில் பணம் செலுத்தாமல் முதலாளியைச் சரிபாருங்கள்." }
+        },
+        {
+          "id": "job-2",
+          "prompt": { "en": "You did not buy a ticket, but a message says you won. The safest view is:", "ta": "நீங்கள் சீட்டு வாங்கவில்லை, ஆனால் வென்றதாகச் செய்தி வருகிறது. பாதுகாப்பான பார்வை:" },
+          "choices": [
+            { "en": "Prizes can arrive at random, so pay the small fee", "ta": "பரிசு தற்செயலாக வரலாம், அதனால் சிறிய கட்டணம் செலுத்துவது" },
+            { "en": "Unexpected winnings that require a fee are a warning", "ta": "கட்டணம் கேட்கும் எதிர்பாராத வெற்றி ஒரு எச்சரிக்கை" },
+            { "en": "Share the message widely so others can claim it", "ta": "மற்றவரும் பெற செய்தியைப் பரப்புவது" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "A prize you did not enter, tied to a fee, matches a well-known scam pattern.", "ta": "நீங்கள் சேராத பரிசு ஒரு கட்டணத்துடன் வந்தால் அது பழக்கமான மோசடி அமைப்பு." }
+        },
+        {
+          "id": "job-3",
+          "prompt": { "en": "Who should you pay for a genuine government benefit?", "ta": "உண்மையான அரசு நலனுக்கு யாருக்குப் பணம் செலுத்த வேண்டும்?" },
+          "choices": [
+            { "en": "A helper who messages you first", "ta": "முதலில் உங்களுக்குச் செய்தி அனுப்பும் உதவியாளர்" },
+            { "en": "Only through the official process, if a fee exists at all", "ta": "கட்டணம் இருந்தால் மட்டும், அதிகாரப்பூர்வ செயல்முறையில்" },
+            { "en": "Whoever sends a QR code", "ta": "QR குறியீடு அனுப்புபவர் யாராக இருந்தாலும்" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "Do not pay a stranger to release a benefit. Use the government portal or local office you contact yourself.", "ta": "ஒரு நலனை விடுவிக்க அந்நியரிடம் பணம் செலுத்த வேண்டாம். நீங்களே தொடர்புகொள்ளும் அரசு தளம் அல்லது அலுவலகத்தைப் பயன்படுத்துங்கள்." }
+        }
+      ]
+    },
+    {
+      "id": "qr-payments",
+      "minutes": 3,
+      "title": { "en": "QR codes and payment requests", "ta": "QR குறியீடுகளும் பணக் கோரிக்கைகளும்" },
+      "summary": {
+        "en": "A QR code is a link or a payment instruction, not a receipt.",
+        "ta": "QR குறியீடு ஒரு இணைப்பு அல்லது பண அறிவுறுத்தல்; அது ரசீது அல்ல."
+      },
+      "explanation": {
+        "en": "Scanning a code can open a website or fill a payment. You cannot see the destination from the pattern alone. Stickers on shops are sometimes replaced, and codes sent in chat can point at a personal account. Before paying, read the name and amount on the payment screen. If the task was only to receive money, you should not need to scan or approve a request.",
+        "ta": "குறியீட்டை ஸ்கேன் செய்தால் ஒரு வலைத்தளம் திறக்கலாம் அல்லது பணம் நிரப்பப்படலாம். வடிவத்தைப் பார்த்து இலக்கை அறிய முடியாது. கடைகளில் ஒட்டிய குறியீடு மாற்றப்படலாம். அரட்டையில் வரும் குறியீடு தனிப்பட்ட கணக்கைக் காட்டலாம். செலுத்துவதற்கு முன் பணத் திரையில் பெயரையும் தொகையையும் படியுங்கள். பணம் பெறுவது மட்டும் வேலை என்றால் ஸ்கேன் செய்யவோ கோரிக்கையை அனுமதிக்கவோ தேவையில்லை."
+      },
+      "warningSigns": [
+        { "en": "A code arrives from someone asking you to “receive” money", "ta": "பணம் “பெற” ஒரு குறியீடு வருகிறது" },
+        { "en": "The payment screen shows a different name from the shop or friend", "ta": "பணத் திரையில் கடை அல்லது நண்பரின் பெயர் வேறாக இருக்கிறது" },
+        { "en": "A sticker looks newly pasted over another code", "ta": "மற்றொரு குறியீட்டின் மேல் புதிதாக ஒட்டிய ஸ்டிக்கர்" },
+        { "en": "You are told not to look at the amount", "ta": "தொகையைப் பார்க்க வேண்டாம் என்கிறார்கள்" }
+      ],
+      "example": {
+        "en": "“Scan this QR to receive the refund. It works only for ten minutes.”",
+        "ta": "“பணம் திரும்பப் பெற இந்த QR-ஐ ஸ்கேன் செய்யுங்கள். பத்து நிமிடம் மட்டும் வேலை செய்யும்.”"
+      },
+      "safeActions": [
+        { "en": "Read the payee name and amount before confirming.", "ta": "உறுதி செய்வதற்கு முன் பெறுநர் பெயரையும் தொகையையும் படியுங்கள்." },
+        { "en": "Do not scan a code in order to receive money.", "ta": "பணம் பெறுவதற்காகக் குறியீட்டை ஸ்கேன் செய்ய வேண்டாம்." },
+        { "en": "If a shop code looks tampered with, ask staff and type the official UPI ID if they provide one.", "ta": "கடைக் குறியீடு சிதைந்திருந்தால் ஊழியரிடம் கேளுங்கள்; அவர்கள் தந்தால் அதிகாரப்பூர்வ UPI எண்ணைத் தட்டச்சு செய்யுங்கள்." }
+      ],
+      "quiz": [
+        {
+          "id": "qr-1",
+          "prompt": { "en": "Someone sends a QR code so you can receive a refund. You should:", "ta": "பணம் திரும்பப் பெற யாரோ QR அனுப்புகிறார். நீங்கள்:" },
+          "choices": [
+            { "en": "Scan it quickly before it expires", "ta": "காலாவதியாகும் முன் வேகமாக ஸ்கேன் செய்வது" },
+            { "en": "Stop. Receiving money should not require you to pay or approve", "ta": "நிறுத்துங்கள். பணம் பெற நீங்கள் செலுத்தவோ அனுமதிக்கவோ தேவையில்லை" },
+            { "en": "Scan it on a friend's phone", "ta": "நண்பரின் தொலைபேசியில் ஸ்கேன் செய்வது" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "A code that claims to receive money often starts a payment. Do not scan it.", "ta": "பணம் பெறும் என்று சொல்லும் குறியீடு பெரும்பாலும் ஒரு கட்டணத்தைத் தொடங்கும். அதை ஸ்கேன் செய்ய வேண்டாம்." }
+        },
+        {
+          "id": "qr-2",
+          "prompt": { "en": "The payment screen shows an unknown name. What next?", "ta": "பணத் திரையில் தெரியாத பெயர் இருக்கிறது. அடுத்து?" },
+          "choices": [
+            { "en": "Cancel and confirm who should be paid", "ta": "ரத்து செய்து யாருக்குச் செலுத்த வேண்டும் என்று உறுதி செய்வது" },
+            { "en": "Pay if the amount is small", "ta": "தொகை சிறியதாக இருந்தால் செலுத்துவது" },
+            { "en": "Pay and ask for a correction later", "ta": "செலுத்திவிட்டு பிறகு திருத்தம் கேட்பது" }
+          ],
+          "correctIndex": 0,
+          "explanation": { "en": "The name on the payment screen is your chance to stop. Cancel when it does not match.", "ta": "பணத் திரையில் உள்ள பெயர் நிறுத்தும் வாய்ப்பு. பொருந்தவில்லை என்றால் ரத்து செய்யுங்கள்." }
+        },
+        {
+          "id": "qr-3",
+          "prompt": { "en": "A QR code on a poster is best treated as:", "ta": "ஒரு சுவரொட்டியில் உள்ள QR குறியீட்டை எப்படிப் பார்ப்பது?" },
+          "choices": [
+            { "en": "A link or payment whose destination you still need to read", "ta": "இலக்கை நீங்கள் படிக்க வேண்டிய இணைப்பு அல்லது பண அறிவுறுத்தல்" },
+            { "en": "Proof that the poster is official", "ta": "சுவரொட்டி அதிகாரப்பூர்வமானது என்ற சான்று" },
+            { "en": "Safe because cameras detect fraud", "ta": "கேமரா மோசடியைக் கண்டுபிடிக்கும் என்பதால் பாதுகாப்பு" }
+          ],
+          "correctIndex": 0,
+          "explanation": { "en": "The code only carries an instruction. Read the opened page or payment sheet before continuing.", "ta": "குறியீடு ஒரு அறிவுறுத்தலை மட்டும் கொண்டுள்ளது. தொடர்வதற்கு முன் திறந்த பக்கம் அல்லது பணத் திரையைப் படியுங்கள்." }
+        }
+      ]
+    },
+    {
+      "id": "account-recovery",
+      "minutes": 4,
+      "title": { "en": "Passwords and account recovery", "ta": "கடவுச்சொல்லும் கணக்கு மீட்பும்" },
+      "summary": {
+        "en": "Recovery is something you start, not something a stranger finishes for you.",
+        "ta": "மீட்பை நீங்கள் தொடங்குவது; ஒரு அந்நியர் உங்களுக்காக முடிப்பது அல்ல."
+      },
+      "explanation": {
+        "en": "A strong password is unique to the service and stored in a password manager if you can use one. Recovery codes and email links are spare keys. Anyone who asks you to forward them can take over the account. If you lose access, start recovery from the service's own sign-in page. Turn on multi-factor authentication using an app or hardware key when the service offers it, and keep a backup method that you control.",
+        "ta": "வலுவான கடவுச்சொல் அந்த சேவைக்கு மட்டும் உரியது. முடிந்தால் கடவுச்சொல் மேலாளரில் வையுங்கள். மீட்புக் குறியீடுகளும் மின்னஞ்சல் இணைப்புகளும் உதிரிச் சாவிகள். அவற்றை அனுப்பச் சொல்பவர் கணக்கை எடுக்கலாம். அணுகல் போனால், அந்த சேவையின் சொந்த உள்நுழைவுப் பக்கத்தில் இருந்து மீட்பைத் தொடங்குங்கள். சேவை தந்தால் செயலி அல்லது வன்பொருள் சாவி மூலம் பல-காரணி அங்கீகாரத்தை இயக்குங்கள். உங்கள் கட்டுப்பாட்டில் ஒரு காப்பு முறையை வையுங்கள்."
+      },
+      "warningSigns": [
+        { "en": "A message contains a recovery link you did not request", "ta": "நீங்கள் கேட்காத மீட்பு இணைப்பு ஒரு செய்தியில் வருகிறது" },
+        { "en": "Someone asks for a backup code “just in case”", "ta": "“தேவைப்பட்டால்” என்று காப்புக் குறியீட்டைக் கேட்கிறார்கள்" },
+        { "en": "The same password is reused on many accounts", "ta": "ஒரே கடவுச்சொல் பல கணக்குகளில் பயன்படுகிறது" },
+        { "en": "A reset arrives while you are on the phone with a stranger", "ta": "அந்நியரிடம் பேசும்போது கடவுச்சொல் மாற்றல் வருகிறது" }
+      ],
+      "example": {
+        "en": "“We started a password reset for you. Forward the recovery email so we can secure the account.”",
+        "ta": "“உங்களுக்காகக் கடவுச்சொல் மாற்றலைத் தொடங்கிவிட்டோம். கணக்கைப் பாதுகாக்க மீட்பு மின்னஞ்சலை அனுப்புங்கள்.”"
+      },
+      "safeActions": [
+        { "en": "Start resets only from the official sign-in page.", "ta": "அதிகாரப்பூர்வ உள்நுழைவுப் பக்கத்தில் இருந்து மட்டும் மாற்றலைத் தொடங்குங்கள்." },
+        { "en": "Do not forward recovery mail or codes.", "ta": "மீட்பு மின்னஞ்சல் அல்லது குறியீடுகளை அனுப்ப வேண்டாம்." },
+        { "en": "Use a different password for mail, banking, and social accounts.", "ta": "மின்னஞ்சல், வங்கி, சமூகக் கணக்குகளுக்கு வெவ்வேறு கடவுச்சொல்லைப் பயன்படுத்துங்கள்." }
+      ],
+      "quiz": [
+        {
+          "id": "pw-1",
+          "prompt": { "en": "Which password habit is safer?", "ta": "எந்தக் கடவுச்சொல் பழக்கம் பாதுகாப்பானது?" },
+          "choices": [
+            { "en": "One memorable password used everywhere", "ta": "எல்லா இடத்திலும் ஒரே எளிதான கடவுச்சொல்" },
+            { "en": "A unique password for each important account", "ta": "ஒவ்வொரு முக்கியக் கணக்கிற்கும் தனிக் கடவுச்சொல்" },
+            { "en": "Your birthday plus the service name", "ta": "பிறந்த நாள் மற்றும் சேவையின் பெயர்" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "Reuse lets one leaked password open other accounts. Unique passwords limit the damage.", "ta": "ஒரே கடவுச்சொல் கசிந்தால் மற்ற கணக்குகளும் திறக்கும். தனிக் கடவுச்சொல் பாதிப்பைக் குறைக்கும்." }
+        },
+        {
+          "id": "pw-2",
+          "prompt": { "en": "A stranger asks you to forward a recovery email. You should:", "ta": "மீட்பு மின்னஞ்சலை அனுப்ப அந்நியர் கேட்கிறார். நீங்கள்:" },
+          "choices": [
+            { "en": "Forward it if they already know your name", "ta": "அவர்களுக்கு உங்கள் பெயர் தெரிந்தால் அனுப்புவது" },
+            { "en": "Refuse. Recovery mail is a key to the account", "ta": "மறுப்பது. மீட்பு மின்னஞ்சல் கணக்கின் சாவி" },
+            { "en": "Forward it and change the password later", "ta": "அனுப்பிவிட்டு பிறகு கடவுச்சொல்லை மாற்றுவது" }
+          ],
+          "correctIndex": 1,
+          "explanation": { "en": "A recovery message can reset the account. Keep it inside the mail account and start recovery yourself if you need it.", "ta": "மீட்புச் செய்தி கணக்கை மாற்றும். அதை மின்னஞ்சல் கணக்குக்குள் வையுங்கள். தேவைப்பட்டால் நீங்களே மீட்பைத் தொடங்குங்கள்." }
+        },
+        {
+          "id": "pw-3",
+          "prompt": { "en": "You did not request a reset, but a reset message arrived. What is a sound step?", "ta": "நீங்கள் கேட்காமல் மாற்றல் செய்தி வந்தது. சரியான படி எது?" },
+          "choices": [
+            { "en": "Ignore the link. If you are worried, open the service yourself and check security settings", "ta": "இணைப்பைப் புறக்கணித்து, கவலைப்பட்டால் சேவையை நீங்களே திறந்து பாதுகாப்பு அமைப்பைப் பார்ப்பது" },
+            { "en": "Click the link to see who sent it", "ta": "யார் அனுப்பினார்கள் என்று பார்க்க இணைப்பைத் திறப்பது" },
+            { "en": "Reply with your current password to cancel it", "ta": "ரத்து செய்ய தற்போதைய கடவுச்சொல்லைப் பதிலாக அனுப்புவது" }
+          ],
+          "correctIndex": 0,
+          "explanation": { "en": "Do not use an unsolicited reset link. Check the account from a page you open yourself.", "ta": "கேட்காத மாற்றல் இணைப்பைப் பயன்படுத்த வேண்டாம். நீங்களே திறக்கும் பக்கத்தில் கணக்கைப் பாருங்கள்." }
+        }
+      ]
+    }
+  ]
+}

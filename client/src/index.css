@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg: #ddd6c6;
+  --ink: #2a2a26;
+  --muted: #59574e;
+  --accent: #4f6238;
+  --sheet: #fffcf8;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #111111;
+  --ink: #f4f1ea;
+  --muted: #b4b4b4;
+  --accent: #8fbf7a;
+  --sheet: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: Epilogue, "Noto Sans Tamil", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  @apply antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -240px;
+  z-index: 50;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+mark.hit {
+  background: #b7d4a0;
+  color: #2a2a26;
+  padding: 0 0.12em;
+  box-decoration-break: clone;
+}
+
+.dark mark.hit {
+  background: #2c4630;
+  color: #f4f1ea;
+}
+
+.app-sheet h1 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.d1 { animation-delay: 0.08s; }
+.d2 { animation-delay: 0.16s; }
+.d3 { animation-delay: 0.24s; }
+.d4 { animation-delay: 0.32s; }
+.d5 { animation-delay: 0.4s; }
+.d6 { animation-delay: 0.48s; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "messages": [
+    {
+      "id": "safe-meeting",
+      "text": "Hi, the study group will meet at 4 pm in the library. Please bring your notes.",
+      "expectedCategory": "low",
+      "expectedIndicators": [],
+      "notes": "Ordinary coordination. No payment, credential, or urgency pattern."
+    },
+    {
+      "id": "safe-otp-advice",
+      "text": "Never share your OTP, PIN, or password with anyone, including people who claim to be from the bank.",
+      "expectedCategory": "low",
+      "expectedIndicators": [],
+      "notes": "Safety advice. Negation suppresses the credential-request indicator. A known limitation is a scam that pairs this advice with a later instruction to send the code."
+    },
+    {
+      "id": "safe-shipping",
+      "text": "Amazon: your package is out for delivery and should arrive today.",
+      "expectedCategory": "low",
+      "expectedIndicators": ["impersonation"],
+      "notes": "Naming a company is recorded as context. Alone it stays in the low band. It is not treated as proof of impersonation."
+    },
+    {
+      "id": "wifi-password",
+      "text": "Please share the wifi password with our guest before the meeting.",
+      "expectedCategory": "low",
+      "expectedIndicators": ["credential_request"],
+      "notes": "False positive for fraud: this is an ordinary request, but it does ask for a password. The lower password weight keeps the band low unless account language is also present."
+    },
+    {
+      "id": "otp-and-threat",
+      "text": "SBI alert: your account will be blocked within 2 hours. Share the OTP sent to your phone immediately.",
+      "expectedCategory": "high",
+      "expectedIndicators": ["account_threat", "credential_request", "impersonation", "urgency"],
+      "notes": "Synthetic bank impersonation. The score is a combination of pressure, a secret request, and an organization name."
+    },
+    {
+      "id": "prize-fee",
+      "text": "You have won a lottery prize of Rs 50,000. Pay the processing fee of Rs 499 to claim it.",
+      "expectedCategory": "high",
+      "expectedIndicators": ["prize_or_job_fee"],
+      "notes": "Classic advance-fee lure. High means several strong patterns, not a confirmed crime."
+    },
+    {
+      "id": "job-fee",
+      "text": "You are selected for a work-from-home position. Pay the registration fee of Rs 1,500 to start training.",
+      "expectedCategory": "high",
+      "expectedIndicators": ["prize_or_job_fee"],
+      "notes": "Synthetic job-fee message. No real employer is named."
+    },
+    {
+      "id": "remote-support",
+      "text": "Customer support will fix your account. Install AnyDesk now and read out the code shown on the screen.",
+      "expectedCategory": "high",
+      "expectedIndicators": ["app_install", "impersonation"],
+      "notes": "Remote-access tools are a strong signal. The screen code is not stored."
+    },
+    {
+      "id": "unlock-transfer",
+      "text": "To unlock your wallet, transfer Rs 5,000 to the UPI ID in this message.",
+      "expectedCategory": "high",
+      "expectedIndicators": ["verification_transfer"],
+      "notes": "Asks for a transfer in order to unlock something. No real UPI ID is included."
+    },
+    {
+      "id": "tamil-otp",
+      "text": "உங்கள் வங்கிக் கணக்கு உடனடியாக முடக்கப்படும். OTP-ஐ இந்த எண்ணுக்கு அனுப்புங்கள்.",
+      "expectedCategory": "high",
+      "expectedIndicators": ["account_threat", "credential_request", "impersonation", "urgency"],
+      "notes": "Tamil message using the same rules. No phone number is included."
+    },
+    {
+      "id": "critical-combo",
+      "text": "Income tax notice: your account will be blocked immediately and legal action will follow. Share the OTP and transfer money to unlock the account. Install AnyDesk and open http://bit.ly/surakshit-sample",
+      "expectedCategory": "critical",
+      "expectedIndicators": [
+        "account_threat",
+        "app_install",
+        "credential_request",
+        "impersonation",
+        "insecure_link",
+        "short_url",
+        "urgency",
+        "verification_transfer"
+      ],
+      "notes": "Several independent patterns at once. The short link uses a reserved sample path and must not be opened."
+    }
+  ],
+  "urls": [
+    {
+      "id": "ordinary-https",
+      "url": "https://www.wikipedia.org/wiki/Phishing",
+      "expectedCategory": "low",
+      "expectedIndicators": [],
+      "notes": "HTTPS is not given a trust bonus. No suspicious pattern is present, and the result is still not a safety guarantee."
+    },
+    {
+      "id": "plain-http",
+      "url": "http://example.com/info",
+      "expectedCategory": "low",
+      "expectedIndicators": ["insecure_http"],
+      "notes": "HTTP is a weak signal. It does not mean the site is malicious."
+    },
+    {
+      "id": "missing-scheme",
+      "url": "example.com/docs",
+      "expectedCategory": "low",
+      "expectedIndicators": ["missing_scheme"],
+      "notes": "The host is parsed for inspection only. Nothing is contacted."
+    },
+    {
+      "id": "ip-host",
+      "url": "https://192.0.2.20/notice",
+      "expectedCategory": "medium",
+      "expectedIndicators": ["ip_hostname"],
+      "notes": "192.0.2.20 is a documentation address from TEST-NET-1. HTTPS does not cancel the IP signal."
+    },
+    {
+      "id": "shortener",
+      "url": "https://bit.ly/surakshit-sample",
+      "expectedCategory": "low",
+      "expectedIndicators": ["url_shortener"],
+      "notes": "A shortener hides the destination. That is a caution, not proof of fraud. Do not open the sample."
+    },
+    {
+      "id": "lookalike",
+      "url": "https://paypa1.com/signin",
+      "expectedCategory": "medium",
+      "expectedIndicators": ["lookalike_domain"],
+      "notes": "Digit substitution against a known brand. The site is not contacted."
+    },
+    {
+      "id": "brand-in-unrelated-domain",
+      "url": "https://secure-paypal-login.example.com/update",
+      "expectedCategory": "medium",
+      "expectedIndicators": ["brand_impersonation"],
+      "notes": "Brand token on a domain that is not that brand's official domain."
+    },
+    {
+      "id": "deceptive-path-only",
+      "url": "https://example.com/secure-login",
+      "expectedCategory": "low",
+      "expectedIndicators": ["deceptive_path"],
+      "notes": "Path wording alone stays low. example.com is a reserved documentation host."
+    },
+    {
+      "id": "many-labels",
+      "url": "https://a.b.c.d.example.com/page",
+      "expectedCategory": "low",
+      "expectedIndicators": ["excessive_subdomains"],
+      "notes": "Many labels can be legitimate. The indicator asks for a closer look."
+    },
+    {
+      "id": "punycode",
+      "url": "https://xn--bcher-kva.example/info",
+      "expectedCategory": "low",
+      "expectedIndicators": ["punycode_host"],
+      "notes": "Internationalized names can be legitimate. This build flags the punycode form and does not fully map confusable scripts."
+    },
+    {
+      "id": "stacked-url-signals",
+      "url": "http://203.0.113.50:8080/paypal-verify",
+      "expectedCategory": "high",
+      "expectedIndicators": ["deceptive_path", "insecure_http", "ip_hostname", "unusual_port"],
+      "notes": "203.0.113.50 is TEST-NET-3. The engine does not connect to it."
+    },
+    {
+      "id": "malformed",
+      "url": "http://",
+      "expectedError": "malformed",
+      "notes": "Rejected before any network call."
+    },
+    {
+      "id": "unsupported-scheme",
+      "url": "javascript:alert(1)",
+      "expectedError": "unsupported_scheme",
+      "notes": "Only http and https are inspected. The value is not executed."
+    }
+  ]
+}
