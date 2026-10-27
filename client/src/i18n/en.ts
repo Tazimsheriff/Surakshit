@@ -29,7 +29,7 @@ export const en = {
     safety: "Safety tips",
     about: "About",
     privacy: "Privacy",
-    rights: "Released under the MIT license. Replace the copyright holder in LICENSE before you publish.",
+    rights: "Released under the MIT license. Copyright 2026 R. Tazim Sheriff, Seerthi Adhavan, and Sakthi Saran.",
     helpline: "India cybercrime helpline: 1930",
   },
   home: {

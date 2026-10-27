@@ -6,6 +6,13 @@ SURAKSHIT is an open-source helper for people who want a plain explanation of a 
 
 The checker lists the patterns it recognized and a heuristic score from 0 to 100. That score is not a probability, and it is not a verdict. A low result is not a promise that something is safe.
 
+## Repository checklist
+
+- [x] [README](README.md) with [setup steps](#local-setup) and [environment variables](#environment-variables)
+- [x] [Technical design document](docs/technical-design.md), including the [architecture diagram](docs/technical-design.md#architecture)
+- [x] [Sample data](data/sample_messages.json) and [test cases](docs/test-cases.md)
+- [x] [License file](LICENSE)
+
 ## Problem
 
 People are asked every day to forward a one-time code, approve a payment, pay a fee for a prize or a job, or install a remote-access app. The message often wears the name of a bank, a courier, or a help desk. Tools that only say "scam" or "safe" are hard to trust, and they are often wrong.
@@ -172,7 +179,7 @@ More detail is in the technical design.
 
 ## License
 
-MIT. The copyright line in [LICENSE](LICENSE) is a placeholder: `[Copyright Holder]`. Replace it before you publish under your own name.
+MIT. Copyright (c) 2026 R. Tazim Sheriff, Seerthi Adhavan, and Sakthi Saran. See [LICENSE](LICENSE).
 
 ## Sample data
 

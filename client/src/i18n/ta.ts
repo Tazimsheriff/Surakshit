@@ -19,7 +19,7 @@ export const ta: Dictionary = {
     safety: "பாதுகாப்பு குறிப்புகள்",
     about: "அறிமுகம்",
     privacy: "தனியுரிமை",
-    rights: "MIT உரிமத்தின் கீழ் வெளியிடப்பட்டுள்ளது. வெளியிடுவதற்கு முன் LICENSE-ல் பதிப்புரிமை பெயரை மாற்றுங்கள்.",
+    rights: "MIT உரிமத்தின் கீழ் வெளியிடப்பட்டுள்ளது. பதிப்புரிமை 2026: R. Tazim Sheriff, Seerthi Adhavan, Sakthi Saran.",
     helpline: "இந்திய இணையக் குற்ற உதவி எண்: 1930",
   },
   home: {

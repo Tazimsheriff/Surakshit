@@ -6,6 +6,25 @@ SURAKSHIT helps a person review a message or a URL before they act on it. The re
 
 The checker works with no account, no AI key, and no database. English and Tamil cover the interface, the rule explanations, the lessons, and the quizzes.
 
+## Architecture
+
+The browser explains a check. The API owns the score. Component boundaries and the privacy table are in [architecture.md](architecture.md).
+
+```mermaid
+flowchart LR
+  person[Person] --> ui[React client]
+  ui -->|"POST /api/analyze, consent flag"| api[Express API]
+  api --> rules[Rule engine]
+  rules --> score[Heuristic score]
+  api -->|"only if opted in"| ai[AI provider]
+  api --> store[Memory or Supabase metadata]
+  ui --> browser[Browser storage: language, theme, quizzes]
+  score --> ui
+  ai --> ui
+```
+
+The rule engine does not resolve DNS and does not send an HTTP request to a submitted address. Stored rows, when a database is configured, hold codes and bands. They do not hold the message or the URL.
+
 ## API contracts
 
 All JSON errors use `{ "ok": false, "error": { "code": string } }`. Validation errors add `issues: [{ "path": string, "code": string }]`. Successful analysis uses HTTP 200.
